@@ -1,4 +1,5 @@
 import Arrow from "@/components/assist/arrow";
+import SimpleMotion from "@/components/assist/simpleMotion";
 import Breadcrumb from "@/components/breadcrumb";
 import Footer from "@/components/footer";
 import Title from "@/components/title";
@@ -44,56 +45,58 @@ const ProjectDetails = () => {
         router={"project"}
         routerId={"id"}
       />
-      <div className="mt-4 max-w-[1400px] mx-auto p-6">
-        <div className="flex gap-2">
-          <div className="bg-white w-2/3 pb-20">
-            <Title name={"Системийн нэр"} />
-            <div className="px-14">asdasdasd</div>
-            <div className="px-14">
-              <Collapse
-                style={{
-                  background: "#fff",
-                  borderRadius: "0px",
-                  borderTop: "0px",
-                  borderRight: "0px",
-                  borderLeft: "0px",
-                }}
-                expandIconPosition="end"
-                items={items}
-                defaultActiveKey={["1"]}
-                onChange={onChange}
-              />
+      <SimpleMotion>
+        <div className="mt-4 max-w-[1400px] mx-auto p-6">
+          <div className="flex gap-2">
+            <div className="bg-white w-2/3 pb-20">
+              <Title name={"Системийн нэр"} />
+              <div className="px-14">asdasdasd</div>
+              <div className="px-14">
+                <Collapse
+                  style={{
+                    background: "#fff",
+                    borderRadius: "0px",
+                    borderTop: "0px",
+                    borderRight: "0px",
+                    borderLeft: "0px",
+                  }}
+                  expandIconPosition="end"
+                  items={items}
+                  defaultActiveKey={["1"]}
+                  onChange={onChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="bg-white w-1/3">
-            <div className="w-full bg-brand-50 p-6 text-white font-medium text-base ">
-              Төсвийн орлого
-            </div>
-            <div>
-              <div className="flex flex-col gap-2 p-6 text-brand-50 font-medium">
-                <Link
-                  href={"/"}
-                  className="flex items-center gap-4 hover:translate-x-1 duration-300"
-                >
-                  <Arrow name={"black"} />
-                  <div className="group-hover:underline group-hover:underline-offset-8 group-hover:text-brand-50">
-                    Бидний тухай
-                  </div>
-                </Link>
-                <Link
-                  href={"/"}
-                  className="flex items-center gap-4 hover:translate-x-1 duration-300"
-                >
-                  <Arrow name={"black"} />
-                  <div className="group-hover:underline group-hover:underline-offset-8 group-hover:text-brand-50">
-                    Бидний тухай
-                  </div>
-                </Link>
+            <div className="bg-white w-1/3">
+              <div className="w-full bg-brand-50 p-6 text-white font-medium text-base ">
+                Төсвийн орлого
+              </div>
+              <div>
+                <div className="flex flex-col gap-2 p-6 text-brand-50 font-medium">
+                  <Link
+                    href={"/"}
+                    className="flex items-center gap-4 hover:translate-x-1 duration-300"
+                  >
+                    <Arrow name={"black"} />
+                    <div className="group-hover:underline group-hover:underline-offset-8 group-hover:text-brand-50">
+                      Бидний тухай
+                    </div>
+                  </Link>
+                  <Link
+                    href={"/"}
+                    className="flex items-center gap-4 hover:translate-x-1 duration-300"
+                  >
+                    <Arrow name={"black"} />
+                    <div className="group-hover:underline group-hover:underline-offset-8 group-hover:text-brand-50">
+                      Бидний тухай
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </SimpleMotion>
       <Footer />
     </div>
   );
